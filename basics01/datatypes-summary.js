@@ -52,3 +52,23 @@ console.log(typeof outsideTemp ); //object
 console.log(myFunction); //function
 
 
+
+//  stack (primitive)    , Heap(non-premitive or reference)
+// stack=> will get copy
+//Heap=> will get reference means whatever we change it changes the original value 
+
+let name="hello"
+let anotherName=name;
+anotherName="world"
+console.log(name);  //hello
+console.log(anotherName);   //world
+ 
+let user={
+    email: "sou@gmail.com",
+    upi: "user@ybl"
+} 
+let userTwo=user
+
+userTwo.email="sourab@google.com"
+console.log(user.email);    //sourab@google.com
+console.log(userTwo.email);//sourab@google.com 
