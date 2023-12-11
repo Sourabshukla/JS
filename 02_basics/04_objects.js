@@ -58,3 +58,27 @@ console.log(Object.values(tinderUser));
 console.log(Object.entries(tinderUser));//Returns an array of key/values of the enumerable properties of an object
 console.log(tinderUser.hasOwnProperty("isLoggedIn"));// true    Determines whether an object has a property with the specified name.
 console.log(tinderUser.hasOwnProperty("isLoggedof"));//false
+
+
+
+const course={
+    coursename:"js in hindi",
+    price:999,
+    courseInstructor:"hitesh"
+}
+//course.courseInstructor    // here for accesing this we have to write so manyb times so we use below step
+
+//const{courseInstructor}=course
+//console.log(courseInstructor);
+
+//destructure of object if name is long so we can use small name like below
+const {courseInstructor: instructor} = course
+//console.log(instructor);
+
+// whenever when we see any in  {}   so we need to think its destructured
+
+//json format
+/* {
+    "name":"sourab",
+    "age":23
+} */
