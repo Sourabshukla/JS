@@ -1,5 +1,6 @@
 //iife => Immediately Invoked function Expression (IIFE)
-//Parentheses are used to contain the JavaScript code, and the term "immediate" refers to the fact that this pattern of wrapping JavaScript code
+/*Parentheses are used to contain the JavaScript code, and the term "immediate" refers to the fact that this 
+pattern of wrapping JavaScript code*/
 
 //  function chai(){
 //     console.log(`DB CONNECTED`);
@@ -15,7 +16,8 @@
 
 //()()  //1st function defination 2nd execution call
 
- // global scope ke pollution se priblem hoti hai kai baar so global scope ke jo variable hai usko hatane ke liye iife ko use krte hai
+ /*global scope ke pollution se priblem hoti hai kai baar so global scope ke jo variable hai usko hatane ke 
+liye iife ko use krte hai*/
 
  // 1st code ko khatam hone ke baad ; lagana
 
