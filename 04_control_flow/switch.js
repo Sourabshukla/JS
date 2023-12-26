@@ -29,7 +29,31 @@
 // }
 
 
-const month="march"
+// const month="march"
+// switch(month){
+//     case "jan":
+//         console.log("january");
+//         break;
+//     case "feb":
+//         console.log("Feburary");
+//         break;
+//     case "march":
+//         console.log("march");
+//         break;
+//     case "april":
+//         console.log("april");
+//         break;
+//     default:
+//         console.log("default case match");
+//         break;
+// }
+
+
+
+// default case
+
+
+const month="june"
 switch(month){
     case "jan":
         console.log("january");
