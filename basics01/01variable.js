@@ -9,3 +9,7 @@ accountCity="hyd"
 //console.log(accountPassword);
 accountEmail="rab@gmail.ccom"
 console.table([accountEmail,accountId,accountPassword,accountCity])
+//The console.table() static method displays tabular data as a table.
+
+//This function takes one mandatory argument data, which must be an array or an object, and one additional optional parameter columns.
+
