@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+    <ul class="language"></ul>
+        <li>javascript</li>
+</body>
+<script>
+
+    function addLanguage(langName) {
+        const li=document.createElement('li')
+        li.innerHTML=`${langName}`
+
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addLanguage("python")
+    addLanguage("typeScript")
+    // optimization issue will come for above
+
+    // adding language in optimize way
+
+    function addOptiLanguage(langName) {
+        const li=document.createElement('li')
+
+        // const addtext=document.createTextNode(langName)
+        // li.appendChild(addtext)
+// we can write like above also but below one is best practise and saved space
+
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage("java")
+
+    //Edit
+
+    const secondLang=document.querySelector('li:nth-child(2)')
+    // secondLang.innerHTML="Mojo" //not optimize approach because tree traversing total
+
+    const newli=document.createElement('li')
+    console.log(secondLang);
+    newli.textContent="Mojo"
+    secondLang.replaceWith(newli)  // approach to edit or replace element
+
+    //edit
+
+    const firstLang=document.querySelector("li:first-child")
+    firstLang.outerHTML='<li>typeScript</li>'
+
+
+    //Remove
+
+    const lastLang=document.querySelector('li:last-child')
+    lastLang.remove()
+
+</script>
+</html>
