@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    // setTimeout(function(){    // it consider once but in setinterval for every 2 seconds it change
+    //     console.log("Sourab");
+    // },2000)
+
+    // setInterval(function(){
+    //     console.log("sourab");
+    // },2000)
+    const saySourab=function(){
+        console.log("sourab");
+    }
+   setTimeout(saySourab,2000)
+    const changeText=function(){
+        document.querySelector('h1').innerHTML="best series of javascript"
+    }
+    const changeMe = setTimeout(changeText,2000)
+
+    clearTimeout(changeMe)
+
+    // allows developers to clear and reset the timer created by the
+    //  setTimeout() method. It is an invaluable asset to have in any software 
+    //  development project, especially when you need to
+    //   reset the timer or delay a certain action within the code.
+
+document.getElementById("stop").addEventListener("click", function () {
+    clearTimeout(changeMe)
+    console.log("STOPPED ");
+})
+</script>
+
+</html>
+
+<!-- 
+
+    // setTimeout(() => {
+        
+    // }, timeout);
+
+
+
+    setInterval(() => {
+        
+    }, interval);
+
+
+
+
+default behaviour=>
+javascript is synchronous(line by line code will run) and single thread
+if single threaded so execution slow and ye single akela engine nhi milega ye browser
+ke runtime error me milega browser or node js or any
+
+
+executation context =>
+
+execute one line of code at a time
+
+each operation waits for the last one to complete before executing
+
+|
+|--console log->1
+|
+|-- console log->2
+|
+
+
+blocking code(synchronous)   vs   non blocking code(asynchrous)
+        |                               |
+        |                               |
+block the flow of program           Read File Async
+        |
+        |
+Read file Sync
+
+
+
+we have data of user and we have to store in database after that we have to
+give a notification to the user register success 
+if we use non block so everytime store in databse(it is also file) if any error
+occur but you sent user that register successful so in this case its not
+efficient so we use block code
+
+so will use use cases we write block code jab tak databse me entry nhi hoti 
+tab tak user ko registeration success ka msg hua ya nhi nhi denge
+
+ -->
