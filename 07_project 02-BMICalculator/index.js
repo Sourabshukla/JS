@@ -3,6 +3,7 @@ const form=document.querySelector('form')
 // this usecasse will give empty
 
 
+
 form.addEventListener('submit' , function(e){
     e.preventDefault()
     
